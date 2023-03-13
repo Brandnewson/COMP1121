@@ -92,7 +92,7 @@ CREATE VIEW vBestSellingGenreAlbum  AS
                JOIN artists art
                ON a.ArtistId = art.ArtistId
                -- only items sold, included
-               RIGHT JOIN invoice_items ii
+               JOIN invoice_items ii
                On t.TrackId = ii.TrackId
                ) t1
          GROUP BY t1.AlbumQuery, t1.GenreQuery
@@ -118,7 +118,7 @@ CREATE VIEW v10BestSellingArtists AS
       AS 'TotalAlbum',
       (SELECT count(i.InvoiceLineId)
          FROM tracks t
-         RIGHT JOIN genres g
+         JOIN genres g
          ON g.GenreId = t.GenreId
          LEFT JOIN albums a
          ON a.AlbumId = t.AlbumId
@@ -173,8 +173,8 @@ CREATE VIEW vTopCustomerEachGenre AS
 To view the created views, use SELECT * FROM views;
 You can uncomment the following to look at invididual views created
 */
-SELECT * FROM vCustomerPerEmployee;
-SELECT * FROM v10WorstSellingGenres;
+-- SELECT * FROM vCustomerPerEmployee;
+-- SELECT * FROM v10WorstSellingGenres;
 SELECT * FROM vBestSellingGenreAlbum ;
-SELECT * FROM v10BestSellingArtists;
-SELECT * FROM vTopCustomerEachGenre;
+-- SELECT * FROM v10BestSellingArtists;
+-- SELECT * FROM vTopCustomerEachGenre;
