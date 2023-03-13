@@ -67,7 +67,6 @@ WARNNIG: DO NOT REMOVE THE STATEMENT "CREATE VIEW vBestSellingGenreAlbum AS"
 ============================================================================
 */
 CREATE VIEW vBestSellingGenreAlbum  AS
-   
    SELECT GenreQuery2 AS 'Genre',
       AlbumQuery2 AS 'Album',
       ArtistQuery2 AS 'Artist',
