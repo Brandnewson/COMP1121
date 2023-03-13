@@ -173,8 +173,8 @@ CREATE VIEW vTopCustomerEachGenre AS
 To view the created views, use SELECT * FROM views;
 You can uncomment the following to look at invididual views created
 */
--- SELECT * FROM vCustomerPerEmployee;
--- SELECT * FROM v10WorstSellingGenres;
+SELECT * FROM vCustomerPerEmployee;
+SELECT * FROM v10WorstSellingGenres;
 SELECT * FROM vBestSellingGenreAlbum ;
--- SELECT * FROM v10BestSellingArtists;
--- SELECT * FROM vTopCustomerEachGenre;
+SELECT * FROM v10BestSellingArtists;
+SELECT * FROM vTopCustomerEachGenre;
